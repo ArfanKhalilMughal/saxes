@@ -92,12 +92,6 @@ module.exports = {
         "no-unused-expressions":
         ["off", "Lots of false positivites due to chai."],
         "no-shadow": ["off", "We shadow test all over the place."],
-        "@typescript-eslint/tslint/config": [
-          "error",
-          {
-            lintFile: "./.tslint.config.json",
-          },
-        ],
         // Routinely violated by large describe blocks.
         "max-lines-per-function": "off",
       },
