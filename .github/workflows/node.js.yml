@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+      - name: Disable Node.js native TypeScript stripping (Node 22+)
+        if: startsWith(matrix.node-version, '22')
+        run: echo "NODE_OPTIONS=--no-experimental-strip-types" >> $GITHUB_ENV
       - run: npm ci
       - run: npm test
 
