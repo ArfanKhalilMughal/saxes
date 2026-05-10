@@ -1,14 +1,18 @@
 {
-  "name": "saxes",
+  "name": "@zklogic/saxes",
   "private": true,
   "description": "An evented streaming XML parser in JavaScript",
-  "author": "Louis-Dominique Dubeau <ldd@lddubeau.com>",
-  "version": "6.0.0",
+  "author": {
+    "email": "arfankhalil@hotmail.com",
+    "name": "Arfan Khalil Mughal",
+    "url": "https://github.com/ArfanKhalilMughal"
+  },
+  "version": "7.0.0",
   "main": "saxes.js",
   "types": "saxes.d.ts",
   "license": "ISC",
   "engines": {
-    "node": ">=v12.22.12"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "tsc": "tsc",
@@ -26,7 +30,19 @@
     "postversion": "npm run test && npm run self:publish",
     "postpublish": "git push origin --follow-tags"
   },
-  "repository": "https://github.com/lddubeau/saxes.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArfanKhalilMughal/saxes.git"
+  },
+  "forkedFrom": {
+    "repository": "https://github.com/lddubeau/saxes",
+    "author": "Louis-Dominique Dubeau",
+    "url": "https://github.com/lddubeau"
+  },
+  "bugs": {
+    "email": "arfankhalil@hotmail.com",
+    "url": "https://github.com/ArfanKhalilMughal/saxes/issues"
+  },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-angular": "^16.3.0",
@@ -34,7 +50,6 @@
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.18.126",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@xml-conformance-suite/js": "^3.0.0",
     "@xml-conformance-suite/mocha": "^3.0.0",
@@ -56,13 +71,11 @@
     "simple-dist-tag": "^1.0.2",
     "ts-node": "^10.9.2",
     "tsd": "^0.22.0",
-    "tslint": "^6.1.3",
-    "tslint-microsoft-contrib": "^6.2.0",
     "typedoc": "^0.28.14",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.0"
   },
   "dependencies": {
-    "xmlchars": "^2.2.0"
+    "@zklogic/xmlchars": "^2.2.3"
   },
   "husky": {
     "hooks": {

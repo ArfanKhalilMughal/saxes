@@ -1,6 +1,6 @@
-import * as ed5 from "xmlchars/xml/1.0/ed5";
-import * as ed2 from "xmlchars/xml/1.1/ed2";
-import * as NSed3 from "xmlchars/xmlns/1.0/ed3";
+import * as ed5 from "@zklogic/xmlchars/xml/1.0/ed5";
+import * as ed2 from "@zklogic/xmlchars/xml/1.1/ed2";
+import * as NSed3 from "@zklogic/xmlchars/xmlns/1.0/ed3";
 
 import isS = ed5.isS;
 import isChar10 = ed5.isChar;
@@ -246,7 +246,7 @@ export type CommentHandler = (comment: string) => void;
  *
  * @param tag The tag.
  */
-export type OpenTagStartHandler<O> = (tag: StartTagForOptions<O>) => void;
+export type OpenTagStartHandler<O extends SaxesOptions> = (tag: StartTagForOptions<O>) => void;
 
 export type AttributeEventForOptions<O extends SaxesOptions> =
   O extends { xmlns: true } ? SaxesAttributeNSIncomplete :
@@ -256,7 +256,7 @@ export type AttributeEventForOptions<O extends SaxesOptions> =
 /**
  * Event handler for attributes.
  */
-export type AttributeHandler<O> =
+export type AttributeHandler<O extends SaxesOptions> =
   (attribute: AttributeEventForOptions<O>) => void;
 
 /**
@@ -265,7 +265,7 @@ export type AttributeHandler<O> =
  *
  * @param tag The tag.
  */
-export type OpenTagHandler<O> = (tag: TagForOptions<O>) => void;
+export type OpenTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a close tag. Note that for self-closing tags, this is
@@ -273,7 +273,7 @@ export type OpenTagHandler<O> = (tag: TagForOptions<O>) => void;
  *
  * @param tag The tag.
  */
-export type CloseTagHandler<O> = (tag: TagForOptions<O>) => void;
+export type CloseTagHandler<O extends SaxesOptions> = (tag: TagForOptions<O>) => void;
 
 /**
  * Event handler for a CDATA section. This is called when ending the
@@ -303,7 +303,7 @@ export type ReadyHandler = () => void;
 export type ErrorHandler = (err: Error) => void;
 
 export type EventName = (typeof EVENTS)[number];
-export type EventNameToHandler<O, N extends EventName> = {
+export type EventNameToHandler<O extends SaxesOptions, N extends EventName> = {
   "xmldecl": XMLDeclHandler;
   "text": TextHandler;
   "processinginstruction": PIHandler;
