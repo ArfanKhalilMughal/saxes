@@ -1,3 +1,14 @@
+## [7.0.1](https://github.com/ArfanKhalilMughal/saxes/compare/v6.0.0...v7.0.1) (2026-05-10)
+
+
+### Bug Fixes
+
+* **ci:** disable Node 22 native TypeScript stripping and enable workflow_dispatch ([3af4629](https://github.com/ArfanKhalilMughal/saxes/commit/3af4629116832f1b422e40af2522685ec6c2f183))
+* **ci:** set NODE_OPTIONS via matrix.include instead of GITHUB_ENV ([81578ae](https://github.com/ArfanKhalilMughal/saxes/commit/81578aea6b73d5a02eb7432f68cc264c7eb1fa6b))
+* replace eslint-config-lddubeau-ts with plugin:@typescript-eslint/recommended ([81d5ad3](https://github.com/ArfanKhalilMughal/saxes/commit/81d5ad31e3b22f76401065ff82f63594e84e1bd1))
+
+
+
 # [6.0.0](https://github.com/lddubeau/saxes/compare/v6.0.0-rc.1...v6.0.0) (2021-11-07)
 
 
