@@ -47,9 +47,15 @@ module.exports = {
     env: {
       node: true,
     },
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+      project: "tsconfig.json",
+      sourceType: "module",
+    },
+    plugins: ["@typescript-eslint"],
     extends: [
       "eslint:recommended",
-      "eslint-config-lddubeau-ts",
+      "plugin:@typescript-eslint/recommended",
     ],
     rules: {
       "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
