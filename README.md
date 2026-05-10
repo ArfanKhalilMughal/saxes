@@ -1,6 +1,18 @@
 # saxes
 
+[![npm](https://img.shields.io/npm/v/@zklogic/saxes)](https://www.npmjs.com/package/@zklogic/saxes)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
+
 A sax-style non-validating parser for XML.
+
+> **Fork of [lddubeau/saxes](https://github.com/lddubeau/saxes)** by
+> [Louis-Dominique Dubeau](https://github.com/lddubeau).
+> Original package published to npm as [`saxes`](https://www.npmjs.com/package/saxes).
+> This fork is maintained by [Arfan Khalil Mughal](https://github.com/ArfanKhalilMughal)
+> at [ArfanKhalilMughal/saxes](https://github.com/ArfanKhalilMughal/saxes)
+> and published to npm as [`@zklogic/saxes`](https://www.npmjs.com/package/@zklogic/saxes).
+
+---
 
 Saxes is a fork of [sax](https://github.com/isaacs/sax-js) 1.2.4. All mentions
 of sax in this project's documentation are references to sax 1.2.4.
@@ -8,7 +20,28 @@ of sax in this project's documentation are references to sax 1.2.4.
 Designed with [node](http://nodejs.org/) in mind, but should work fine in the
 browser or other CommonJS implementations.
 
-Saxes does not support Node versions older than 10.
+Saxes does not support Node versions older than 18.
+
+## Installation
+
+```bash
+npm install @zklogic/saxes
+```
+
+---
+
+## Changes in This Fork
+
+- Migrated runtime dependency from [`xmlchars`](https://www.npmjs.com/package/xmlchars)
+  to [`@zklogic/xmlchars`](https://www.npmjs.com/package/@zklogic/xmlchars)
+  (maintained fork of the same upstream library).
+- Removed EOL tooling: `tslint`, `tslint-microsoft-contrib`, and the
+  `@typescript-eslint/eslint-plugin-tslint` bridge plugin.
+- Upgraded TypeScript from v4 to v5.
+- Minimum Node.js version raised from 12 to 18 (Node 12 reached EOL April 2022).
+- Repository: <https://github.com/ArfanKhalilMughal/saxes>
+
+---
 
 ## Notable Differences from Sax.
 
