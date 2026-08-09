@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+  push:
+    tags: [ "v*" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: npm
+          registry-url: https://registry.npmjs.org/
+      - name: Ensure npm supports trusted publishing
+        run: npm install -g npm@latest
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Publish to npm
+        run: cd build/dist && npm publish --access public
