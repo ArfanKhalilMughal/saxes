@@ -7,12 +7,12 @@
     "name": "Arfan Khalil Mughal",
     "url": "https://github.com/ArfanKhalilMughal"
   },
-  "version": "7.0.3",
+  "version": "7.0.4",
   "main": "saxes.js",
   "types": "saxes.d.ts",
   "license": "ISC",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "tsc": "tsc",
