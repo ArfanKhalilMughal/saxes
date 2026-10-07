@@ -514,8 +514,8 @@ export interface NSOptions {
 export interface NSOptionsWithoutNamespaces extends NSOptions {
   xmlns?: false;
   // It makes no sense to set these if namespaces are not used.
-  additionalNamespaces?: undefined;
-  resolvePrefix?: undefined;
+  additionalNamespaces?: never;
+  resolvePrefix?: never;
 }
 
 export interface NSOptionsWithNamespaces extends NSOptions {
